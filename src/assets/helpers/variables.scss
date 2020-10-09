@@ -1,0 +1,54 @@
+:root {
+	font-size: 16px;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-family: 'Rubik', sans-serif;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 3rem;
+	color: #222;
+	text-align: center;
+}
+
+.summary {
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: #888;
+	line-height: 1.5;
+	text-align: center;
+	max-width: 70%;
+	margin: 70px 0;
+}
+
+// ## //
+$bg-main: #4b4276;
+$bg-sub: #594f8d;
+$txt-main: #fff;
+$txt-sub: #bdb8d7;
+$speed: 500ms;
+$barbarian: #ec9b3b;
+$archer: #ee5487;
+$giant: #f6901a;
+$goblin: #82bb30;
+$primary: #4facff;
+// ## //
+
+// .router-link-exact-active {
+// 	color: #fff !important;
+//  background-color: $bg-sub !important;
+// }
+
+/* ----------  client side ---------- */
+
+$dark: #222;
+$white: #fff;
+$phone: #4b4b4b;
+$title: #22272d;
+$adbg: #fcbc39;
+$rating: #fab60a;
+$event: #ce4f44;
+$bg: #4d2c21;
+$text-color: #666;
+$price-color: #feda5e;
+$box-shadow: 0 0px 40px 0 rgba(0, 0, 0, 0.2);

@@ -1,0 +1,37 @@
+/* ----- Basic ----- */
+@import './helpers/reset.scss';
+@import './helpers/mixin.scss';
+@import './helpers/variables.scss';
+
+/* ----- views for client----- */
+@import './client/views/about.scss';
+@import './client/views/blog.scss';
+@import './client/views/cart.scss';
+@import './client/views/checkout.scss';
+@import './client/views/collect.scss';
+@import './client/views/contact.scss';
+@import './client/views/home.scss';
+@import './client/views/register.scss';
+@import './client/views/user.scss';
+@import './client/views/menu.scss';
+
+/* ----- views for admin----- */
+@import './admin/views/dashbaord.scss';
+@import './admin/views/products.scss';
+@import './admin/views/orders.scss';
+@import './admin/views/coupons.scss';
+
+/* ----- components for client ----- */
+@import './client/components/header.scss';
+@import './client/components/footer.scss';
+@import './client/components/carousel.scss';
+@import './client/components/card.scss';
+
+/* ----- components for admin ----- */
+@import './admin/components/header.scss';
+@import './admin/components/modal.scss';
+@import './admin/components/fastpick.scss';
+@import './admin/components/card.scss';
+
+/* ----- common components ----- */
+@import './common/pagination.scss';

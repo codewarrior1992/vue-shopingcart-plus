@@ -1,0 +1,66 @@
+.card-head {
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 250px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	i {
+		position: absolute;
+		bottom: 8px;
+		right: 15px;
+		font-size: 1.5rem;
+		cursor: pointer;
+		color: #ce4f44;
+	}
+	a.link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		background: transparent;
+	}
+}
+.card-content {
+	padding: 15px;
+	text-align: center;
+	.info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		span {
+			font-size: 1.2rem;
+		}
+	}
+	h2 {
+		font-weight: bold;
+		font-size: 1.3rem;
+		margin-top: 15px;
+		text-transform: capitalize;
+	}
+	p {
+		margin: 15px 0;
+		color: #666;
+		line-height: 1.5;
+	}
+	.ratings {
+		@include rating(#fab60a, #fff);
+		font-size: 0.8rem;
+	}
+	.cart {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		color: #222;
+		border: #222 1px solid;
+		padding: 15px;
+		transition: ease $speed;
+		&:hover {
+			background-color: #444;
+			color: #fff;
+		}
+	}
+}

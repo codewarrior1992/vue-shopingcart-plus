@@ -1,0 +1,29 @@
+ul.pages {
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	@include mobile-media {
+		justify-content: center;
+	}
+	a {
+		position: relative;
+		display: block;
+		padding: 0.5rem 1rem;
+		margin-left: -1px;
+		line-height: 1.25;
+		color: #007bff;
+		background-color: transparent;
+		border: 1.5px solid #dee2e6;
+		transition: all ease $speed;
+		font-size: 1rem;
+		&.active,
+		&:hover {
+			background-color: #fff;
+			color: #007bff;
+		}
+	}
+	.disabled {
+	}
+}

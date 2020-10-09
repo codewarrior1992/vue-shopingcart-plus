@@ -1,0 +1,99 @@
+.about-page {
+	min-width: 100vw;
+	.wraper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.about {
+		margin: 80px 0;
+		img {
+			max-width: 90%;
+		}
+	}
+	.story {
+		.title {
+			margin-bottom: 80px;
+		}
+		.tabs {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 50%;
+			li.tab-link {
+				display: inline-block;
+				padding: 8px 15px;
+				background-color: #e4584b;
+				color: #fff;
+				border-radius: 30px;
+				transition: ease $speed;
+				font-size: 1.5rem;
+				text-align: center;
+				letter-spacing: 1px;
+				cursor: pointer;
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 20px;
+					left: -250px;
+					width: 250px;
+					height: 1px;
+					background: transparent;
+					z-index: -1;
+					border-top: 1px dashed #e4584b;
+				}
+				&:first-child::before {
+					display: none;
+				}
+				&:hover {
+					background-color: #e4584b;
+					color: #fff;
+				}
+			}
+			li.active {
+				color: #fff;
+				background-color: #e4584b;
+			}
+			li.active ~ li {
+				background-color: #f7f7f7;
+				color: #666;
+			}
+		}
+		.tab-content {
+			margin: 80px;
+			max-width: 60%;
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+			.photo {
+				background: url('https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60');
+				background-position: top center;
+				background-size: cover;
+				width: 100%;
+				height: 400px;
+			}
+			.info {
+				h3 {
+					font-size: 2rem;
+					color: #222;
+					font-weight: bold;
+					letter-spacing: 2px;
+					margin-bottom: 20px;
+				}
+				p {
+					line-height: 1.5;
+					text-align: left;
+					color: #666;
+				}
+			}
+		}
+	}
+	.awards {
+		margin-bottom: 80px;
+	}
+}

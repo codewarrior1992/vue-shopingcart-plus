@@ -1,0 +1,144 @@
+@mixin pad-x-media {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin pad-y-media {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mobile-media {
+	@media (max-width: 414px) {
+		@content;
+	}
+}
+
+@mixin i5-x-media {
+	@media (max-width: 568px) {
+		@content;
+	}
+}
+
+@mixin i5-y-media {
+	@media (max-width: 350px) {
+		@content;
+	}
+}
+
+@mixin clearfix {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+@mixin btn($bg-color, $ft-color) {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 46px;
+	width: 46px;
+	border-radius: 50%;
+	color: $ft-color;
+	background-color: $bg-color;
+	border: $bg-color 1px solid;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin form-btn($bg-color, $ft-color) {
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	background-color: $bg-sub;
+	color: $ft-color;
+}
+
+@mixin rating($main, $sub) {
+	display: flex;
+	.rating-item {
+		border: 1px solid $sub;
+		cursor: pointer;
+		font-size: 2em;
+		color: $main;
+		&:before {
+			content: '\2605';
+		}
+		&.active ~ .rating-item::before {
+			content: '\2606';
+		}
+	}
+}
+
+@mixin menu-card($txt) {
+	.menu-card {
+		border-bottom: 1px solid #eaeaea;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		img {
+			min-width: 150px;
+			min-height: 150px;
+			margin-right: 20px;
+		}
+		.header {
+			border-bottom: 1px dashed #999;
+			display: flex;
+			width: 100%;
+		}
+		.title {
+			margin: 0;
+			padding: 0;
+			font-size: 1.5rem;
+			text-align: left;
+			padding: 8px 0;
+			width: 100%;
+			color: $txt;
+		}
+		span.weight {
+			float: none;
+			font-size: 13px;
+			color: #999;
+			background-color: rgba(0, 0, 0, 0.05);
+			padding: 3px 6px;
+			border-radius: 4px;
+			vertical-align: text-top;
+			margin-left: 5px;
+		}
+		span.price {
+			font-weight: 400;
+			font-size: 1.5rem;
+			float: right;
+			&:after {
+				clear: both;
+				display: block;
+				content: '';
+			}
+		}
+		.content {
+			color: #999;
+			font-style: italic;
+			padding: 15px 0;
+			line-height: 1.5;
+		}
+		.footer span {
+			padding: 4px;
+			font-size: 0.8rem;
+			color: #999;
+			background-color: rgba(0, 0, 0, 0.03);
+			margin-right: 4px;
+			border-radius: 5px;
+			&.extra {
+				color: $txt;
+				background-color: transparent;
+			}
+		}
+		.info-wraper {
+			width: 100%;
+			padding-bottom: 40px;
+		}
+	}
+}

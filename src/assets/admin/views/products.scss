@@ -1,0 +1,28 @@
+.products {
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: #e4eefa;
+	@include mobile-media {
+		padding: 15px;
+	}
+	.wrapper {
+		display: grid;
+		grid-template-columns: 90% 10%;
+		@include mobile-media {
+			grid-template-columns: 1fr;
+			gap: 15px;
+		}
+		& > .modal {
+			justify-self: end;
+			@include mobile-media {
+				grid-template-columns: 1fr;
+				gap: 15px;
+				grid-column: 1;
+				grid-row: 1;
+			}
+		}
+	}
+}

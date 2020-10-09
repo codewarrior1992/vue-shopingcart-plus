@@ -1,0 +1,227 @@
+.modal {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	a.modal-box {
+		@include btn(#5078ef, #fff);
+		@include mobile-media {
+			border-radius: 0%;
+		}
+	}
+}
+
+.modal-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: ease $speed all;
+	overflow: auto;
+	/* animation */
+	&.active {
+		background-color: rgba(0, 0, 0, 0.4);
+		opacity: 1;
+		visibility: visible;
+		z-index: 5;
+	}
+	&.active .modal-wraper {
+		// transform: translateY(0%);
+		// @include pad-x-media {
+		// 	transform: translateY(-30%);
+		// }
+		// @include pad-y-media {
+		// 	transform: translateY(-60%);
+		// }
+		// @include mobile-media {
+		// 	transform: translateY(-22%);
+		// }
+		// @include i5-media {
+		// 	transform: translateY(-5%);
+		// }
+		top: 50px;
+		@include pad-y-media {
+			top: 0px;
+		}
+		@include pad-x-media {
+			top: 15px;
+		}
+	}
+}
+
+.modal-wraper {
+	max-width: 50%;
+	background-color: #fff;
+	position: absolute;
+
+	@include pad-y-media {
+		min-width: 90%;
+	}
+	/* animation */
+	top: 0px;
+	transition: ease $speed all;
+	.header {
+		width: 100%;
+		padding: 10px;
+		position: relative;
+		background-color: $bg-sub;
+		text-align: center;
+		color: #fff;
+		font-size: 1.5rem;
+		letter-spacing: 1px;
+		i {
+			position: absolute;
+			right: 7px;
+			top: 7px;
+			cursor: pointer;
+		}
+	}
+	.content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 15px;
+		padding: 15px;
+		@include mobile-media {
+			grid-template-columns: 1fr;
+		}
+	}
+	.img-group {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 3fr;
+		@include mobile-media {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+		}
+		.upload {
+			border: 1px solid #9e9e9e;
+			display: flex;
+			position: relative;
+			@include mobile-media {
+				height: 50px;
+			}
+			&::after {
+				position: absolute;
+				color: #9e9e9e;
+				opacity: 1;
+				content: 'Drop your Image .. ';
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-weight: bold;
+				width: 100%;
+				text-align: center;
+				pointer-events: none;
+			}
+			input[type='file'] {
+				width: 100%;
+				opacity: 0;
+				cursor: pointer;
+			}
+		}
+		.preview {
+			padding: 15px;
+			margin-top: 15px;
+			border: 1px solid #9e9e9e;
+			border-radius: 5px;
+			@include mobile-media {
+				display: none;
+			}
+		}
+	}
+	.input-group {
+		padding: 0px 0.1px;
+		color: #000;
+		text-transform: capitalize;
+		.title,
+		.textarea,
+		.feature {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		input[type='text'],
+		input[type='number'],
+		textarea,
+		select {
+			outline: none;
+			position: relative;
+			&:focus {
+				border: #5078ef 1px solid;
+			}
+			&:focus ~ label {
+				color: #5078ef;
+			}
+		}
+		.title {
+			margin-bottom: 7px;
+
+			input[type='text'] {
+				width: 100%;
+				height: 25px;
+				padding-left: 5px;
+			}
+			label {
+				margin-bottom: 7px;
+			}
+		}
+		.textarea {
+			label {
+				margin-bottom: 7px;
+			}
+			textarea {
+				margin-bottom: 7px;
+				min-width: 100%;
+				max-width: 100%;
+				padding: 5px 0 0 5px;
+			}
+		}
+		.input-wraper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 7px 15px;
+			margin: 7px 0;
+			.feature {
+				align-items: stretch;
+				justify-content: center;
+				input {
+					width: 100%;
+					height: 25px;
+					padding-left: 5px;
+				}
+				select {
+					height: 25px;
+					padding-left: 5px;
+				}
+				label {
+					margin-bottom: 7px;
+				}
+			}
+		}
+		.status {
+			display: flex;
+			align-items: center;
+			margin: 14px 0;
+			input {
+				margin: 0 5px 0 0;
+			}
+		}
+		a {
+			display: inline-block;
+			text-align: center;
+			padding: 14px;
+			width: 100%;
+			color: #fff;
+			background-color: $bg-sub;
+			&:hover {
+				background-color: $bg-main;
+			}
+		}
+	}
+}
